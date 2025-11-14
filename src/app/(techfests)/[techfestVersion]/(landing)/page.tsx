@@ -30,7 +30,8 @@ const Page = ({
               id={p.type}
               //@ts-expect-error:'///
               data={
-                p.type.toLowerCase() === "sponsors"
+                p.type.toLowerCase() === "sponsors" &&
+                techfestData?.partners?.titleSponsor
                   ? compact(
                       p.partners.map((partner) => [
                         partner,
@@ -47,4 +48,5 @@ const Page = ({
     </div>
   );
 };
+
 export default Page;
