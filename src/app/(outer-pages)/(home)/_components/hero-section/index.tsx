@@ -28,12 +28,7 @@ const HeroSection = () => {
       >
         <div className="grid place-items-center lg:max-w-screen-xl gap-8 mx-auto py-20 md:py-32 z-10">
           <div className="text-center space-y-8">
-            {/* <Badge variant="outline" className="text-sm py-2"> */}
-            {/* <span className="mr-2 text-primary">
-                <Badge>{currentTechfest.label}</Badge>
-              </span> */}
             <Badge>{techfestStatusText[techfestStatus]}</Badge>
-            {/* </Badge> */}
 
             <div className="max-w-screen-md mx-auto text-center text-4xl md:text-6xl font-bold">
               <h1>
@@ -42,7 +37,7 @@ const HeroSection = () => {
               </h1>
             </div>
 
-            <p className="max-w-screen-sm mx-auto text-xl text-muted-foreground">
+            <p className="max-w-screen-sm mx-auto text-base md:text-lg text-muted-foreground">
               A joint tech fest by EXCESS xTech and ACES TechFest, bringing
               together brilliant minds of IOE Purwanchal Campus. Experience the
               thrill of hackathons, robotics challenges, debugging, and hardware

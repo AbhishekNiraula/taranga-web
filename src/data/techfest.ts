@@ -43,7 +43,7 @@ export type CurrentTechfest = TechfestValue & {
 export const techfestData: TechfestData = {
   "v1.0": {
     path: "/v1.0/",
-    startDate: "2025/12/12",
+    startDate: "2026/1/10",
     endDate: "",
     landingPage: {
       desc: "Dive into ACES Taranga v7.0—where ideas spark, skills grow, and the future takes shape. Join the action and redefine innovation!",

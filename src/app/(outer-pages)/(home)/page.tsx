@@ -4,7 +4,7 @@ import { WelcomeMessageSection } from "./_components/welcome-message-section";
 
 const Home = () => {
   return (
-    <div className="space-y-12">
+    <div>
       <HeroSection />
       <HighlightImages />
       <WelcomeMessageSection />

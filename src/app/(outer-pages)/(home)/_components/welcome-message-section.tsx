@@ -10,7 +10,7 @@ import Image from "next/image";
 
 const WelcomeMessageSection = () => {
   return (
-    <section id="welcome-message" className="container py-24 sm:py-32">
+    <section id="welcome-message" className="container py-12 sm:py-24">
       <div className="text-center mb-8">
         <h2 className="text-lg text-muted-foreground/60 text-center mb-2 tracking-wider">
           Join us in celebration!

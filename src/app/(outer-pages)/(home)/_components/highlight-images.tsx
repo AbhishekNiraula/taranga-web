@@ -22,7 +22,7 @@ const HighlightImages = () => {
   );
 
   return (
-    <section id="highlights" className="container py-24 sm:py-32 relative">
+    <section id="highlights" className="container py-12 sm:py-24 relative">
       <div className="text-center mb-8">
         <h2 className="text-lg text-muted-foreground/60 text-center mb-2 tracking-wider">
           A journey through time.
