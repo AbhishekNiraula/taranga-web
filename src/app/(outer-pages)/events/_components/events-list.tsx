@@ -24,7 +24,7 @@ const EventsList = ({ events }: Props) => {
   ];
   return (
     <>
-      <Tabs defaultValue="all" className="gap-4">
+      <Tabs defaultValue="all" className="gap-4 ">
         <TabsList className="bg-background rounded-none border-b p-0">
           {tabs.map((tab) => (
             <TabsTrigger
@@ -38,7 +38,7 @@ const EventsList = ({ events }: Props) => {
         </TabsList>
 
         {tabs.map((tab) => (
-          <TabsContent key={tab.value} value={tab.value}>
+          <TabsContent key={tab.value} value={tab.value} className="space-y-6">
             {(() => {
               let filteredEvents = events;
               if (tab.value === "aces") {
