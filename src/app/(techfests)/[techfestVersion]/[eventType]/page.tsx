@@ -5,6 +5,7 @@ import { getTechfestDataWithEvents } from "@/helpers/get-techfest-data-with-even
 import { Calendar } from "lucide-react";
 import Image from "next/image";
 import Link from "./_components/link";
+import { buttonVariants } from "@/components/ui/button";
 
 const EVENT_TYPES = ["pre-events", "post-events", "main-events"];
 
@@ -47,12 +48,33 @@ const Page = async ({
                   <span className="absolute flex items-center justify-center w-6 h-6 p-1 rounded-full -start-3 bg-muted text-muted-foreground">
                     <Calendar />
                   </span>
-                  <h3 className="flex items-center mb-1 text-xl sm:text-3xl md:text-4xl font-semibold text-foreground">
-                    {e.event?.title}
-                    <Badge className="ms-3 max-sm:hidden" variant={"secondary"}>
-                      {eventType.substring(0, eventType.length - 1)}
-                    </Badge>
-                  </h3>
+                  <div className="flex items-center mb-1 ">
+                    <div className="flex flex-col">
+                      {e.date ? (
+                        <Badge className="w-fit">{e.date}</Badge>
+                      ) : (
+                        <Badge className="w-fit" variant={"outline"}>
+                          Soon
+                        </Badge>
+                      )}
+                      <h3 className="text-xl sm:text-3xl md:text-4xl font-semibold text-foreground">
+                        {e.event?.title}
+                      </h3>
+                    </div>
+                    <div className="flex gap-2">
+                      <Badge
+                        className="ms-3 max-sm:hidden"
+                        variant={"secondary"}
+                      >
+                        {eventType.substring(0, eventType.length - 1)}
+                      </Badge>
+                      {e.by && (
+                        <Badge className="max-sm:hidden" variant={"outline"}>
+                          {e.by}
+                        </Badge>
+                      )}
+                    </div>
+                  </div>
                   <p className="mb-4 text-base font-normal text-foreground/80">
                     {e.event?.desc}
                   </p>
@@ -66,6 +88,15 @@ const Page = async ({
                 />
               </div>
               <div className="flex items-center gap-3">
+                <a
+                  href={`/events/#${e.eventId}`!}
+                  className={buttonVariants({
+                    variant: "secondary",
+                    size: "sm",
+                  })}
+                >
+                  Know More
+                </a>
                 <Link
                   event={e.eventId}
                   eventType={eventType}

@@ -13,7 +13,7 @@ type Props = {
 const EventCard = ({ event, index: i }: Props) => {
   return (
     <Card
-      className="p-6 grid grid-cols-1 lg:grid-cols-7 bg-card/30 gap-9 scroll-m-20"
+      className="p-6 grid grid-cols-1 lg:grid-cols-7 bg-card/30 gap-9 scroll-m-32"
       id={event.id}
     >
       <div

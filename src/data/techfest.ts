@@ -1,6 +1,8 @@
 export type Event = {
   eventId: string;
   href?: string;
+  date?: string;
+  by?: "ACES" | "EXCESS";
 };
 
 export type Partner = {
@@ -53,50 +55,39 @@ export const techfestData: TechfestData = {
     },
     preEvents: [
       {
-        eventId: "ai-art-competition",
-        href: "https://www.facebook.com/share/p/186iP9hQCW/",
+        eventId: "capture-the-flag",
+        by: "ACES",
       },
       {
         eventId: "learning-challenge",
-        href: "https://www.facebook.com/share/p/1CyEhSS9E8/",
+        by: "ACES",
+        date: "Poush 1 to Poush 15",
       },
       {
         eventId: "brain-storming-quiz",
-        href: "https://www.facebook.com/share/p/1HNnWe8URv/",
+        by: "ACES",
+        date: "Poush 14 to Poush 21",
+      },
+      {
+        eventId: "datathon",
+        by: "ACES",
+        date: "Poush 23 to Poush 24",
       },
     ],
     mainEvents: [
       {
-        eventId: "hackathon",
-        href: "https://www.facebook.com/share/19Wd8emPbY/",
+        eventId: "google-maestro",
+        by: "ACES",
+        date: "Poush 27",
       },
       {
         eventId: "intern-fest",
-        href: "https://www.facebook.com/share/p/15deRVAuWK/",
-      },
-      {
-        eventId: "google-maestro",
-        href: "https://www.facebook.com/share/1AqhLAEyDJ/",
-      },
-      {
-        eventId: "datathon",
-        href: "https://www.facebook.com/share/15ft4PqbeV/",
+        by: "ACES",
+        date: "Poush 27, 28",
       },
       {
         eventId: "ar-bug-hunt",
-        href: "https://www.facebook.com/share/15fDxeStim/",
-      },
-      {
-        eventId: "capture-the-flag",
-        href: "https://www.facebook.com/share/19hCLvGiwX/",
-      },
-      {
-        eventId: "ui-ux-competition",
-        href: "https://www.facebook.com/share/1E4Gd9DGWW/",
-      },
-      {
-        eventId: "game-fest",
-        href: "https://www.facebook.com/share/p/18umLThpmg/",
+        by: "ACES",
       },
     ],
     partners: {
