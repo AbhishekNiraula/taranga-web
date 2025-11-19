@@ -1,5 +1,8 @@
+import { EventData } from '@/helpers/get-all-events';
+
 export type Event = {
 	eventId: string;
+	event?: EventData;
 	href?: string;
 	date?: string;
 	by?: 'ACES' | 'EXCESS';
