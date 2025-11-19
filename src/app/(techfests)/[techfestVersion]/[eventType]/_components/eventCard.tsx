@@ -4,13 +4,14 @@ import Image from 'next/image';
 import Link from './link';
 import { Badge } from '@/components/ui/badge';
 import { buttonVariants } from '@/components/ui/button';
+import { Event } from '@/data/techfest';
 
 function EventCard({
 	e,
 	eventType,
 	techfestVersion,
 }: {
-	e: any;
+	e: Event;
 	eventType: string;
 	techfestVersion: string;
 }) {

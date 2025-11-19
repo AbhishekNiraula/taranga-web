@@ -4,6 +4,7 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 import { MDXRemote } from 'next-mdx-remote/rsc';
+import type { MDXComponents as MDXComponentsType } from 'mdx/types';
 
 const AboutPage = async () => {
 	const filePath = path.join(process.cwd(), 'src/contents/about.mdx');
@@ -22,7 +23,10 @@ const AboutPage = async () => {
 			</div>
 
 			<div className="flex flex-col items-center justify-center text-center gap-4 max-w-3xl m-auto relative z-10">
-				<MDXRemote source={content} components={MDXComponents as any} />
+				<MDXRemote
+					source={content}
+					components={MDXComponents as unknown as MDXComponentsType}
+				/>
 			</div>
 
 			{data.stats && <MDXComponents.Stats stats={data.stats} />}
